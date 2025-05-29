@@ -3,24 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "Healthy Delivery App",
-    description:
-      "Aplikasi seperti Gojek Food dengan fitur filter makanan berdasarkan kalori, alergi, pantangan, dan halal/tidak halal. Memenangkan Silver Medal di MiiEX dan Best Business Model di Yan Chai Steam Faire."
-  },
-  {
     title: "Devflow",
     description:
       "Platform komunitas developer mirip StackOverflow dengan fitur AI bawaan untuk menjawab pertanyaan secara otomatis."
-  },
-  {
-    title: "Form2WA",
-    description:
-      "SaaS untuk menghubungkan form web dengan WhatsApp, memungkinkan pengiriman pesan otomatis dari form submission."
-  },
-  {
-    title: "Kelasin",
-    description:
-      "Aplikasi belajar kolaboratif dengan AI explainer, to-do list grup, dan voting verifikasi kontribusi anggota. Fokus untuk pelajar dan mahasiswa."
   },
   {
     title: "MUNU",
