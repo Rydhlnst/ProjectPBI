@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,24 +26,27 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">MyPortfolio</h1>
+        <h1 className="text-xl font-bold">404ryan</h1>
 
-        <nav className="hidden md:flex space-x-4">
+        <nav className="hidden md:flex space-x-4 items-center">
           <a href="#about" className="hover:underline">About</a>
           <a href="#projects" className="hover:underline">Projects</a>
           <a href="#tech" className="hover:underline">Tech Stack</a>
+          <ModeToggle/>
         </nav>
 
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <Menu />
-        </button>
+        <div className="space-x-3 md:hidden p-2">
+          <ModeToggle/>
+          <Button
+            variant={"ghost"}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <Menu />
+          </Button>
+        </div>
       </div>
 
-      {/* Fullscreen Mobile Menu */}
       {menuOpen && (
         <div className="fixed inset-0 bg-background z-40 px-6 pt-6">
           <div className="flex justify-end">
@@ -71,9 +76,11 @@ export default function Navbar() {
             >
               Tech Stack
             </a>
+
           </div>
         </div>
       )}
+
     </header>
   );
 }
